@@ -1,0 +1,274 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@300;500;700&display=swap");
+/* Variables */
+/* Mixins */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Libre Baskerville", serif;
+}
+
+html {
+  font-size: 62.5%; /* Modificación del porcentaje root de la fuente para facilitar el uso de rem */
+}
+
+body {
+  background-image: url(/Coder2/Imagenes/fondo\ pagina.png); /*Imagen de fondo para el sitio*/
+  background-size: cover; /*Permite que la imagen cubra toda la pantalla*/
+  background-position: center;
+  height: 100vh;
+}
+
+.nav-item {
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+.nav-item:hover {
+  color: aliceblue;
+}
+
+.navbar-nav {
+  padding: 1.5rem;
+}
+
+/* Estilado de la sección home*/
+.presentacion {
+  max-width: 110rem;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.presentacion .bienvenida {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.presentacion h1 {
+  font-size: 6.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.presentacion h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.presentacion .descripcion {
+  max-width: 70rem;
+  margin: 1.5rem auto;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#main-trabajemos {
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2.5rem;
+  padding: 2rem 2.5rem;
+  border: 0.2rem solid black;
+  border-radius: 5rem;
+  color: rgb(0, 12, 54);
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+#main-trabajemos:hover {
+  background-color: rgb(0, 85, 176);
+  color: #fff;
+}
+
+/* Estilado de la sección sobre mi*/
+.sobremi {
+  max-width: 110rem;
+  padding: 10rem 1.5rem;
+  color: rgb(0, 12, 54);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.sobremi h2 {
+  text-transform: uppercase;
+  color: rgb(0, 12, 54);
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 12, 54);
+  font-size: 4.4rem;
+  font-weight: bold;
+  margin: 3rem;
+  letter-spacing: 0.2rem;
+}
+.sobremi p {
+  max-width: 80%;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: rgb(29, 30, 47);
+  margin-bottom: 1.2rem;
+  text-align: center;
+  line-height: 4rem;
+}
+.sobremi a {
+  font-size: 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(0, 3, 40);
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+  border: 0.2rem solid black;
+  margin-top: 3rem;
+  transition: 0.5s;
+}
+
+/* Estilado de la sección contacto*/
+.contacto {
+  text-transform: uppercase;
+  color: rgb(0, 12, 54);
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 12, 54);
+  font-size: 4.4rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  max-width: 110rem;
+  padding: 10rem 1.5rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  padding: 1rem;
+  background-color: rgb(245, 245, 245);
+  border-radius: 3rem;
+  margin: 0 4rem 0 4rem;
+}
+.card title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(0, 12, 54);
+}
+.card text {
+  font-size: 1.2rem;
+}
+
+/*Estilado de la sección Proyectos */
+#portfolio {
+  max-width: 110rem;
+  padding: 10rem 0;
+  margin: auto;
+}
+#portfolio .titulo-seccion {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: rgb(0, 12, 54);
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 12, 54);
+  font-size: 4.4rem;
+  text-decoration-color: rgb(0, 12, 54);
+  text-decoration-thickness: 0.5rem;
+}
+#portfolio .fila {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+#portfolio .proyecto {
+  max-width: 45rem;
+  border: 0.1rem solid rgb(19, 19, 19);
+  margin: 0 3rem;
+  position: relative;
+  overflow: hidden;
+}
+#portfolio .proyecto img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  object-fit: cover;
+  transition: 0.5s;
+}
+#portfolio:hover img {
+  filter: grayscale(0);
+}
+#portfolio .info {
+  position: absolute;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  color: rgb(161, 207, 255);
+  width: 100%;
+  padding: 0.1rem;
+  opacity: 0;
+  bottom: -4rem;
+  transition: 0.5s;
+}
+#portfolio .info .fila .proyecto:hover .info {
+  opacity: 1;
+  bottom: 0;
+}
+
+/*Estilado de la sección Trabajemos */
+#trabajemos {
+  padding: 10rem 1.5rem;
+}
+#trabajemos .titulo-seccion {
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  color: rgb(0, 12, 54);
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 12, 54);
+  text-decoration-thickness: 0.5rem;
+  color: rgb(0, 0, 0);
+}
+#trabajemos .contenedor-form {
+  max-width: 110rem;
+  margin: auto;
+}
+#trabajemos .contenedor-form .fila {
+  margin-bottom: 1.5rem;
+}
+#trabajemos .contenedor-form .mitad {
+  display: flex;
+  justify-content: space-between;
+}
+#trabajemos .contenedor-form input,
+#trabajemos .contenedor-form textarea {
+  padding: 2rem;
+  border-radius: 2rem;
+  border: none;
+  border: 0.1rem solid gray;
+}
+#trabajemos .contenedor-form .mitad input {
+  width: 48%;
+}
+#trabajemos .contenedor-form .input-full {
+  width: 100%;
+}
+#trabajemos .btn-enviar {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 1rem 1.5rem;
+  font: 1.8rem;
+  font-weight: bold;
+}
+#trabajemos .btn-enviar:hover {
+  background-color: rgb(0, 85, 176);
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
